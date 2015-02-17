@@ -11,17 +11,20 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20150214214525) do
+ActiveRecord::Schema.define(version: 20150217222916) do
 
   create_table "schools", force: :cascade do |t|
     t.string   "name"
-    t.integer  "avg_score"
     t.string   "category"
     t.string   "address"
     t.float    "lat"
     t.float    "long"
     t.datetime "created_at"
     t.datetime "updated_at"
+    t.integer  "tier1_score"
+    t.integer  "tier2_score"
+    t.integer  "tier3_score"
+    t.integer  "tier4_score"
   end
 
 end
