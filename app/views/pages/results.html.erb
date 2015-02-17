@@ -1,0 +1,81 @@
+
+<div class="jumbotron">
+  <h1>Your total score is <%= @total_score %></h1>
+  <p>You should shoot for the schools in green</p>
+</div>
+
+<div class="container">
+  <div class="row">
+    <div class="col-md-8 col-md-offset-2">
+      <table class="table table-hover">
+        <thead>
+          <tr>
+            <th>School</th>
+            <th>Average score</th>
+            <th>Your chance to be accepted</th>
+            <th>Score you need on the admissions test</th>
+            <th>Percentage you need on the admissions test</th>
+          </tr>
+        </thead>
+        <tbody>
+          <% @schools.each do |school| %>
+              <% if @total_score + 285 < school.avg_score %>
+                <tr>
+                  <td><%= school.name %></td>
+                  <td><%= school.avg_score %></td>
+                    <td>Low</td>
+                    <td></td>
+                    <td></td>
+              <% else %>
+                <tr class="high-acceptance">
+                  <td><%= school.name %></td>
+                  <td><%= school.avg_score %></td>
+                  <td>High</td>
+                  <td><%= school.avg_score - @total_score %></td>
+                  <td><%= ((school.avg_score - @total_score)*100.0/300).round(0) %>%</td>
+              <% end %>
+                </tr>
+          <% end %>
+        </tbody>
+      </table>
+    </div>
+  </div>
+
+
+</div>
+
+<h2>School locations</h2>
+<p>Mouse over the marker to find the school name</p>
+
+<style type="text/css">
+  html, body, #map-canvas { height: 500px; margin: 0; padding: 0;}
+</style>
+<script type="text/javascript"
+  src="https://maps.googleapis.com/maps/api/js?">
+</script>
+<script type="text/javascript">
+  function initialize() {
+    var mapOptions = {
+      center: { lat: 41.8369, lng: -87.6847},
+      zoom: 10
+    };
+    var map = new google.maps.Map(document.getElementById('map-canvas'),
+        mapOptions);
+
+    <% @schools.each do |school| %>
+      var myLatlng = new google.maps.LatLng(<%= school.lat %>,<%= school.long %>);
+      var marker = new google.maps.Marker({
+          position: myLatlng,
+          map: map,
+          title:"<%= school.name %>"
+      });
+    <% end %>
+  }
+  google.maps.event.addDomListener(window, 'load', initialize);
+</script>
+
+<div class="container">
+
+
+  <div id="map-canvas"></div>
+</div>
