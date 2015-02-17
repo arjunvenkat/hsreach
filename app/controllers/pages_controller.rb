@@ -21,20 +21,6 @@ class PagesController < ApplicationController
 
     @total_score = scores.sum
     @schools = School.all
-
-    @school_array = [
-      ["King College", 650],
-      ["Lindblom", 728],
-      ["Brooks", 755],
-      ["Lane Tech", 813],
-      ["Jones College Prep", 857],
-      ["Westinghouse", 718],
-      ["Walter Payton", 883],
-      ["Whitney Young", 857],
-      ["Northside", 879]
-    ]
-
-
   end
 
 end

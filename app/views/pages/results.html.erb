@@ -6,38 +6,59 @@
 
 <div class="container">
   <div class="row">
-    <div class="col-md-8 col-md-offset-2">
-      <table class="table table-hover">
-        <thead>
-          <tr>
-            <th>School</th>
-            <th>Average score</th>
-            <th>Your chance to be accepted</th>
-            <th>Score you need on the admissions test</th>
-            <th>Percentage you need on the admissions test</th>
-          </tr>
-        </thead>
-        <tbody>
-          <% @schools.each do |school| %>
-              <% if @total_score + 285 < school.avg_score %>
-                <tr>
-                  <td><%= school.name %></td>
-                  <td><%= school.avg_score %></td>
-                    <td>Low</td>
-                    <td></td>
-                    <td></td>
-              <% else %>
-                <tr class="high-acceptance">
-                  <td><%= school.name %></td>
-                  <td><%= school.avg_score %></td>
-                  <td>High</td>
-                  <td><%= school.avg_score - @total_score %></td>
-                  <td><%= ((school.avg_score - @total_score)*100.0/300).round(0) %>%</td>
-              <% end %>
-                </tr>
+    <div class="col-md-10 col-md-offset-1">
+      <div class="filter">
+      </div>
+      <div class="table">
+        <% @schools.each do |school| %>
+          <% if @total_score + 285 < school.avg_score  %>
+            <div class="t-row">
+              <div class="cell">
+                <div class="school-name"><%= school.name %></div>
+                <div class="avg-score">
+                  <div class="label">avg score for acceptance: <%= school.avg_score %></div>
+                </div>
+              </div>
+              <div class="cell">
+                <div class="chance low">low</div>
+                <div class="label">chance of acceptance</div>
+              </div>
+              <div class="cell">
+
+              </div>
+            </div>
+          <% else %>
+            <div class="t-row high-acceptance">
+              <div class="cell">
+                <div class="transp">-</div>
+                <div class="school-name"><%= school.name %></div>
+                <div class="avg-score">
+                  <div class="label">avg score for acceptance: <%= school.avg_score %></div>
+                </div>
+              </div>
+              <div class="cell">
+                <div class="transp">-</div>
+                <div class="chance high">high</div>
+                <div class="label">chance of acceptance</div>
+              </div>
+              <div class="cell">
+                <div class="label">you need to get</div>
+                  <div class="score">
+                    <span class="num"><%= school.avg_score - @total_score  %></span>
+                    points
+                  </div>
+                  <span class="or">-or-</span>
+                  <div class="percent"><%= ((school.avg_score - @total_score)*100.0/300).round(0)  %>%</div>
+                <div class="label">on the admissions test</div>
+              </div>
+            </div>
           <% end %>
-        </tbody>
-      </table>
+
+        <% end %>
+
+
+      </div>
+
     </div>
   </div>
 
@@ -48,7 +69,7 @@
 <p>Mouse over the marker to find the school name</p>
 
 <style type="text/css">
-  html, body, #map-canvas { height: 500px; margin: 0; padding: 0;}
+  html, body, #map-canvas { height: 500px; margin: 0;}
 </style>
 <script type="text/javascript"
   src="https://maps.googleapis.com/maps/api/js?">
@@ -75,7 +96,9 @@
 </script>
 
 <div class="container">
-
-
-  <div id="map-canvas"></div>
+  <div class="row">
+    <div class="col-md-10 col-md-offset-1">
+      <div id="map-canvas"></div>
+    </div>
+  </div>
 </div>

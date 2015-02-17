@@ -47,5 +47,83 @@ footer {
   padding-bottom: 100px;
 }
 
+.table {
+  display: table;
+  padding-bottom: 32px;
+}
+
+.t-row {
+  display: table-row;
+}
+
+.cell {
+  display: table-cell;
+  padding: 24px 20px 32px;
+  font-size: 1.3em;
+  border-top: 1px solid black;
+}
+
+/*.cell:first-child {
+  border-left: 1px solid black;
+}
+
+.cell:last-child {
+  border-right: 1px solid black;
+}*/
+
+.cell .school-name {
+  font-size: 1.8em;
+  max-width: 350px;
+}
+
+.t-row:last-child .cell {
+  border-bottom: 1px solid black;
+}
+
+.avg-score {
+  font-size: 1em;
+}
+
+.chance {
+  font-size: 2em;
+}
 
 
+.score {
+  display: inline-block;
+}
+
+.score .num {
+  font-size: 2em;
+}
+
+.percent {
+  font-size: 2em;
+  display: inline-block;
+  padding-left: 0.5em;
+}
+
+.or {
+  font-size: 1.3em;
+  padding-left: 0.5em;
+}
+
+.table .label {
+  color: #666;
+  font-weight: 400;
+  text-align: left;
+  font-size: inherit;
+  padding: 0;
+}
+
+div.label {
+  display: block;
+}
+
+.filter {
+  padding-top: 48px;
+}
+
+.transp {
+  color: rgba(255,255,255,0)
+}
