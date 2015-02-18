@@ -1,7 +1,7 @@
 
 <div class="jumbotron">
   <h1>Your total score is <%= @total_score %></h1>
-  <p>You should shoot for the schools in green</p>
+  <h2>and you live in Tier <%= @tier_num %></h2>
 </div>
 
 <div class="container">
@@ -11,29 +11,13 @@
       </div>
       <div class="table">
         <% @schools.each do |school| %>
-          <% if @total_score + 285 < school.avg_score  %>
-            <div class="t-row">
-              <div class="cell">
-                <div class="school-name"><%= school.name %></div>
-                <div class="avg-score">
-                  <div class="label">avg score for acceptance: <%= school.avg_score %></div>
-                </div>
-              </div>
-              <div class="cell">
-                <div class="chance low">low</div>
-                <div class="label">chance of acceptance</div>
-              </div>
-              <div class="cell">
-
-              </div>
-            </div>
-          <% else %>
+          <% if school.acceptance_chance?(@total_score, @tier_num) == "high"  %>
             <div class="t-row high-acceptance">
               <div class="cell">
                 <div class="transp">-</div>
                 <div class="school-name"><%= school.name %></div>
                 <div class="avg-score">
-                  <div class="label">avg score for acceptance: <%= school.avg_score %></div>
+                  <div class="label">avg score for acceptance: <%= school.avg_score(@tier_num) %></div>
                 </div>
               </div>
               <div class="cell">
@@ -44,13 +28,80 @@
               <div class="cell">
                 <div class="label">you need to get</div>
                   <div class="score">
-                    <span class="num"><%= school.avg_score - @total_score  %></span>
+                    <span class="num"><%= school.avg_score(@tier_num) - @total_score  %></span>
                     points
                   </div>
                   <span class="or">-or-</span>
-                  <div class="percent"><%= ((school.avg_score - @total_score)*100.0/300).round(0)  %>%</div>
+                  <div class="percent"><%= ((school.avg_score(@tier_num) - @total_score)*100.0/300).round(0)  %>%</div>
                 <div class="label">on the admissions test</div>
               </div>
+            </div>
+          <% elsif school.acceptance_chance?(@total_score, @tier_num) == "medium"  %>
+            <div class="t-row med-acceptance">
+              <div class="cell">
+                <div class="transp">-</div>
+                <div class="school-name"><%= school.name %></div>
+                <div class="avg-score">
+                  <div class="label">avg score for acceptance: <%= school.avg_score(@tier_num) %></div>
+                </div>
+              </div>
+              <div class="cell">
+                <div class="transp">-</div>
+                <div class="chance high">medium</div>
+                <div class="label">chance of acceptance</div>
+              </div>
+              <div class="cell">
+                <div class="label">you need to get</div>
+                  <div class="score">
+                    <span class="num"><%= school.avg_score(@tier_num) - @total_score  %></span>
+                    points
+                  </div>
+                  <span class="or">-or-</span>
+                  <div class="percent"><%= ((school.avg_score(@tier_num) - @total_score)*100.0/300).round(0)  %>%</div>
+                <div class="label">on the admissions test</div>
+              </div>
+            </div>
+          <% elsif school.acceptance_chance?(@total_score, @tier_num) == "low"  %>
+            <div class="t-row low-acceptance">
+              <div class="cell">
+                <div class="transp">-</div>
+                <div class="school-name"><%= school.name %></div>
+                <div class="avg-score">
+                  <div class="label">avg score for acceptance: <%= school.avg_score(@tier_num) %></div>
+                </div>
+              </div>
+              <div class="cell">
+                <div class="transp">-</div>
+                <div class="chance high">low</div>
+                <div class="label">chance of acceptance</div>
+              </div>
+              <div class="cell">
+                <div class="label">you need to get</div>
+                  <div class="score">
+                    <span class="num"><%= school.avg_score(@tier_num) - @total_score  %></span>
+                    points
+                  </div>
+                  <span class="or">-or-</span>
+                  <div class="percent"><%= ((school.avg_score(@tier_num) - @total_score)*100.0/300).round(0)  %>%</div>
+                <div class="label">on the admissions test</div>
+              </div>
+            </div>
+          <% else  %>
+            <div class="t-row">
+              <div class="cell">
+                <div class="transp">-</div>
+                <div class="school-name"><%= school.name %></div>
+                <div class="avg-score">
+                  <div class="label">avg score for acceptance: <%= school.avg_score(@tier_num) %></div>
+                </div>
+              </div>
+              <div class="cell">
+                <div class="transp">-</div>
+                <div class="chance high">no</div>
+                <div class="label">chance of acceptance</div>
+              </div>
+              <div class="cell"></div>
+
             </div>
           <% end %>
 

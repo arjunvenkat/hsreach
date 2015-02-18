@@ -18,6 +18,7 @@ Rails.application.routes.draw do
 
   get "/" => 'pages#home'
   get "/results" => 'pages#results'
+  get "/get_tier" => 'pages#get_tier'
   # The priority is based upon order of creation: first created -> highest priority.
   # See how all your routes lay out with "rake routes".
 

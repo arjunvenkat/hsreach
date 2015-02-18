@@ -1,0 +1,39 @@
+<div class="jumbotron">
+  <div class="container">
+    <h1>H.S. Reach</h1>
+    <p>We'll help you figure out the Chicago high school application process</p>
+  </div>
+</div>
+
+
+<h2>Almost done! please go to the link below and find out your Tier</h2>
+<h3><a href="http://cpstiers.opencityapps.org/" target="_blank">Find your tier</a></h3>
+<h3>Enter in your tier number below along with your home address</h3>
+<h3><small>Please just put in a number, not the word "Tier"</small></h3>
+
+<div class="container">
+  <div class="col-md-8 col-md-offset-2">
+    <%= form_tag "/results", method: :get, :class => "form-horizontal" do %>
+      <div class="form-group">
+        <label for="tier_num" class="col-sm-5 control-label">Tier Number</label>
+        <div class="col-sm-2">
+          <input type="text" class="form-control" name="tier_num" id="tier_num" placeholder="3">
+        </div>
+      </div>
+      <div class="form-group">
+        <label for="address" class="col-sm-5 control-label">Home Address</label>
+        <div class="col-sm-7">
+          <input type="text" class="form-control" name="address" id="address" placeholder="4747 South Marshfield Avenue, Chicago, IL 60609">
+        </div>
+      </div>
+
+      <div class="form-group">
+        <div class="col-sm-offset-5 col-sm-10">
+          <button type="submit" class="btn btn-default">Submit</button>
+        </div>
+      </div>
+    <% end -%>
+  </div>
+</div>
+
+

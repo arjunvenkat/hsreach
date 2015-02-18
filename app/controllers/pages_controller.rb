@@ -3,23 +3,26 @@ class PagesController < ApplicationController
   def home
   end
 
-  def results
-    grade_conv = {
-      "a" => 75,
-      "b" => 50,
-      "c" => 25,
-      "d" => 0,
-      "f" => 0
-    }
-    scores = []
-    scores << nwea_math_score = (params['nwea_math'].to_i*1.515).round(0)
-    scores << nwea_reading_score = (params['nwea_reading'].to_i*1.515).round(0)
-    scores << reading_score = grade_conv[params['reading'][0].downcase]
-    scores << math = grade_conv[params['math'][0].downcase]
-    scores << science = grade_conv[params['science'][0].downcase]
-    scores << social_studies = grade_conv[params['social_studies'][0].downcase]
+  def get_tier
+    session[:nwea_math] = params[:nwea_math].present? ? params[:nwea_math] : session[:nwea_math]
+    session[:nwea_reading] = params[:nwea_reading].present? ? params[:nwea_reading] : session[:nwea_reading]
+    session[:math] = params[:math].present? ? params[:math] : session[:math]
+    session[:reading] = params[:reading].present? ? params[:reading] : session[:reading]
+    session[:science] = params[:science].present? ? params[:science] : session[:science]
+    session[:social_studies] = params[:social_studies].present? ? params[:social_studies] : session[:social_studies]
+  end
 
-    @total_score = scores.sum
+  def results
+    @tier_num = School.sanitize_tier_input(params[:tier_num])
+
+
+    @total_score = School.total_score_for(session[:nwea_math],
+                                          session[:nwea_reading],
+                                          session[:math],
+                                          session[:reading],
+                                          session[:science],
+                                          session[:social_studies])
+
     @schools = School.all
   end
 

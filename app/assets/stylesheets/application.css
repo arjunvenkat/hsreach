@@ -31,8 +31,12 @@ form {
   padding-top: 32px;
 }
 
-.high-acceptance {
+.high-acceptance, .med-acceptance {
   background: lightgreen;
+}
+
+.low-acceptance {
+  background: lightyellow;
 }
 
 .jumbotron p {
