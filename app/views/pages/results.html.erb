@@ -10,98 +10,100 @@
       <div class="filter">
       </div>
       <div class="table">
-        <% @schools.each do |school| %>
+        <% @schools.each_with_index do |school, index| %>
           <% if school.acceptance_chance?(@total_score, @tier_num) == "high"  %>
-            <div class="t-row high-acceptance">
+            <div class="t-row high-acceptance school_<%= index %>">
               <div class="cell">
-                <div class="transp">-</div>
-                <div class="school-name"><%= school.name %></div>
-                <div class="avg-score">
-                  <div class="label">avg score for acceptance: <%= school.avg_score(@tier_num) %></div>
-                </div>
+                <div class="transp sub-info">-</div>
+                <div class="main-info"><%= school.name %></div>
+                <div class="sub-info">avg score for acceptance: <%= school.avg_score(@tier_num) %></div>
+                <div class="transp sub-info dist">9.9 mi from your home</div>
               </div>
               <div class="cell">
-                <div class="transp">-</div>
-                <div class="chance high">high</div>
-                <div class="label">chance of acceptance</div>
+                <div class="transp sub-info">-</div>
+                <div class="main-info">high</div>
+                <div class="sub-info">chance of acceptance</div>
               </div>
               <div class="cell">
-                <div class="label">you need to get</div>
+                <div class="sub-info">you need to get</div>
+                <div class="main-info">
                   <div class="score">
                     <span class="num"><%= school.avg_score(@tier_num) - @total_score  %></span>
                     points
                   </div>
                   <span class="or">-or-</span>
                   <div class="percent"><%= ((school.avg_score(@tier_num) - @total_score)*100.0/300).round(0)  %>%</div>
-                <div class="label">on the admissions test</div>
+                </div>
+                <div class="sub-info">on the admissions test</div>
               </div>
             </div>
           <% elsif school.acceptance_chance?(@total_score, @tier_num) == "medium"  %>
-            <div class="t-row med-acceptance">
+            <div class="t-row med-acceptance school_<%= index %>">
               <div class="cell">
-                <div class="transp">-</div>
-                <div class="school-name"><%= school.name %></div>
-                <div class="avg-score">
-                  <div class="label">avg score for acceptance: <%= school.avg_score(@tier_num) %></div>
-                </div>
+                <div class="transp sub-info">-</div>
+                <div class="main-info"><%= school.name %></div>
+                <div class="sub-info">avg score for acceptance: <%= school.avg_score(@tier_num) %></div>
+                <div class="transp sub-info dist">9.9 mi from your home</div>
               </div>
               <div class="cell">
-                <div class="transp">-</div>
-                <div class="chance high">medium</div>
-                <div class="label">chance of acceptance</div>
+                <div class="transp sub-info">-</div>
+                <div class="main-info">medium</div>
+                <div class="sub-info">chance of acceptance</div>
               </div>
               <div class="cell">
-                <div class="label">you need to get</div>
+                <div class="sub-info">you need to get</div>
+                <div class="main-info">
                   <div class="score">
                     <span class="num"><%= school.avg_score(@tier_num) - @total_score  %></span>
                     points
                   </div>
                   <span class="or">-or-</span>
                   <div class="percent"><%= ((school.avg_score(@tier_num) - @total_score)*100.0/300).round(0)  %>%</div>
-                <div class="label">on the admissions test</div>
+                </div>
+                <div class="sub-info">on the admissions test</div>
               </div>
             </div>
           <% elsif school.acceptance_chance?(@total_score, @tier_num) == "low"  %>
-            <div class="t-row low-acceptance">
+            <div class="t-row low-acceptance school_<%= index %>">
               <div class="cell">
-                <div class="transp">-</div>
-                <div class="school-name"><%= school.name %></div>
-                <div class="avg-score">
-                  <div class="label">avg score for acceptance: <%= school.avg_score(@tier_num) %></div>
-                </div>
+                <div class="transp sub-info">-</div>
+                <div class="main-info"><%= school.name %></div>
+                <div class="sub-info">avg score for acceptance: <%= school.avg_score(@tier_num) %></div>
+                <div class="transp sub-info dist">9.9 mi from your home</div>
               </div>
               <div class="cell">
-                <div class="transp">-</div>
-                <div class="chance high">low</div>
-                <div class="label">chance of acceptance</div>
+                <div class="transp sub-info">-</div>
+                <div class="main-info">low</div>
+                <div class="sub-info">chance of acceptance</div>
               </div>
               <div class="cell">
-                <div class="label">you need to get</div>
+                <div class="sub-info">you need to get</div>
+                <div class="main-info">
                   <div class="score">
                     <span class="num"><%= school.avg_score(@tier_num) - @total_score  %></span>
                     points
                   </div>
                   <span class="or">-or-</span>
                   <div class="percent"><%= ((school.avg_score(@tier_num) - @total_score)*100.0/300).round(0)  %>%</div>
-                <div class="label">on the admissions test</div>
+                </div>
+                <div class="sub-info">on the admissions test</div>
               </div>
             </div>
           <% else  %>
-            <div class="t-row">
+            <div class="t-row no-acceptance school_<%= index %>">
               <div class="cell">
-                <div class="transp">-</div>
-                <div class="school-name"><%= school.name %></div>
-                <div class="avg-score">
-                  <div class="label">avg score for acceptance: <%= school.avg_score(@tier_num) %></div>
-                </div>
+                <div class="transp sub-info">-</div>
+                <div class="main-info"><%= school.name %></div>
+                <div class="sub-info">avg score for acceptance: <%= school.avg_score(@tier_num) %></div>
+                <div class="transp sub-info dist">9.9 mi from your home</div>
               </div>
               <div class="cell">
-                <div class="transp">-</div>
-                <div class="chance high">no</div>
-                <div class="label">chance of acceptance</div>
+                <div class="transp sub-info">-</div>
+                <div class="main-info">no</div>
+                <div class="sub-info">chance of acceptance</div>
               </div>
-              <div class="cell"></div>
-
+              <div class="cell">
+              </div>
             </div>
           <% end %>
 
@@ -128,20 +130,62 @@
 <script type="text/javascript">
   function initialize() {
     var mapOptions = {
-      center: { lat: 41.8369, lng: -87.6847},
+      center: { lat: <%= @lat %>, lng: <%= @lng %>},
       zoom: 10
     };
     var map = new google.maps.Map(document.getElementById('map-canvas'),
         mapOptions);
 
+    var schoolLocations = [];
     <% @schools.each do |school| %>
-      var myLatlng = new google.maps.LatLng(<%= school.lat %>,<%= school.long %>);
+      var schoolLocation = new google.maps.LatLng(<%= school.lat %>,<%= school.long %>);
       var marker = new google.maps.Marker({
-          position: myLatlng,
+          position: schoolLocation,
           map: map,
           title:"<%= school.name %>"
       });
+      schoolLocations.push(schoolLocation);
     <% end %>
+
+     var image = "<%= asset_path('house_icon.svg') %>";
+     var home = new google.maps.LatLng(<%= @lat %>, <%= @lng %>);
+     var beachMarker = new google.maps.Marker({
+         position: home,
+         map: map,
+         icon: image,
+         title: "Your home"
+     });
+
+
+     var origin = home
+
+     var destinationA = "Stockholm, Sweden";
+     var destinationB = new google.maps.LatLng(50.087692, 14.421150);
+
+     var service = new google.maps.DistanceMatrixService();
+     service.getDistanceMatrix(
+       {
+         origins: [home],
+         destinations: schoolLocations,
+         travelMode: google.maps.TravelMode.DRIVING,
+         unitSystem: google.maps.UnitSystem.IMPERIAL
+       }, callback);
+
+
+
+     function callback(response, status) {
+      console.log(response);
+       $.each(response.rows[0].elements, function(index, object){
+          var distance = object.distance.text
+          console.log(distance);
+          $('.school_' + index + ' .dist')
+            .text(distance + " from your home")
+            .removeClass('transp');
+       });
+     }
+
+
+
   }
   google.maps.event.addDomListener(window, 'load', initialize);
 </script>

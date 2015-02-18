@@ -1,0 +1,267 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<!-- Created with Inkscape (http://www.inkscape.org/) -->
+<svg
+   xmlns:dc="http://purl.org/dc/elements/1.1/"
+   xmlns:cc="http://creativecommons.org/ns#"
+   xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+   xmlns:svg="http://www.w3.org/2000/svg"
+   xmlns="http://www.w3.org/2000/svg"
+   xmlns:xlink="http://www.w3.org/1999/xlink"
+   xmlns:sodipodi="http://sodipodi.sourceforge.net/DTD/sodipodi-0.dtd"
+   xmlns:inkscape="http://www.inkscape.org/namespaces/inkscape"
+   width="48"
+   height="48"
+   id="svg3223"
+   sodipodi:version="0.32"
+   inkscape:version="0.46"
+   sodipodi:docname="house_icon.svg"
+   inkscape:output_extension="org.inkscape.output.svg.inkscape"
+   inkscape:export-filename="/home/ezuall/workspace/everated/res/drawable/myhome.png"
+   inkscape:export-xdpi="90"
+   inkscape:export-ydpi="90"
+   version="1.0">
+  <defs
+     id="defs3225">
+    <linearGradient
+       id="linearGradient3223">
+      <stop
+         style="stop-color:#7e7e7e;stop-opacity:1;"
+         offset="0"
+         id="stop3225" />
+      <stop
+         style="stop-color:#787878;stop-opacity:1;"
+         offset="1"
+         id="stop3227" />
+    </linearGradient>
+    <inkscape:perspective
+       sodipodi:type="inkscape:persp3d"
+       inkscape:vp_x="0 : 32 : 1"
+       inkscape:vp_y="0 : 1000 : 0"
+       inkscape:vp_z="64 : 32 : 1"
+       inkscape:persp3d-origin="32 : 21.333333 : 1"
+       id="perspective3231" />
+    <linearGradient
+       inkscape:collect="always"
+       xlink:href="#linearGradient3223"
+       id="linearGradient3229"
+       x1="9.8203354"
+       y1="31.28125"
+       x2="54.054665"
+       y2="31.28125"
+       gradientUnits="userSpaceOnUse" />
+    <linearGradient
+       inkscape:collect="always"
+       xlink:href="#linearGradient3223"
+       id="linearGradient3236"
+       gradientUnits="userSpaceOnUse"
+       x1="31.9375"
+       y1="63.623478"
+       x2="31.9375"
+       y2="0.42568138"
+       gradientTransform="matrix(0.7342519,0,0,0.7462447,0.1285649,-0.1983029)" />
+    <filter
+       inkscape:collect="always"
+       id="filter3309"
+       x="-0.11450495"
+       width="1.2290099"
+       y="-0.12604904"
+       height="1.2520981">
+      <feGaussianBlur
+         inkscape:collect="always"
+         stdDeviation="2.2058582"
+         id="feGaussianBlur3311" />
+    </filter>
+    <filter
+       inkscape:collect="always"
+       id="filter3398">
+      <feGaussianBlur
+         inkscape:collect="always"
+         stdDeviation="0.42686165"
+         id="feGaussianBlur3400" />
+    </filter>
+    <clipPath
+       clipPathUnits="userSpaceOnUse"
+       id="clipPath3420">
+      <g
+         id="g3422"
+         inkscape:export-filename="/home/ezuall/workspace/everated_resources/icon tutorial/icon_with_colour.png"
+         inkscape:export-xdpi="260.42999"
+         inkscape:export-ydpi="260.42999"
+         style="fill:url(#linearGradient3428);fill-opacity:1;display:inline">
+        <path
+           style="fill:url(#linearGradient3426);fill-opacity:1;fill-rule:evenodd;stroke:none;stroke-width:0.56900001;stroke-linecap:butt;stroke-linejoin:miter;marker:none;marker-start:none;marker-mid:none;marker-end:none;stroke-miterlimit:4;stroke-dashoffset:0;stroke-opacity:1;visibility:visible;display:inline;overflow:visible;enable-background:accumulate"
+           d="M 31.875,11.28125 C 31.812316,11.28125 31.749772,11.304446 31.6875,11.3125 C 31.378405,11.352478 31.082161,11.480339 30.84375,11.71875 L 10.25,32.34375 C 9.6771138,32.916636 9.6771136,33.833363 10.25,34.40625 L 12.03125,36.1875 C 12.604136,36.760386 13.520863,36.760385 14.09375,36.1875 L 31.9375,18.375 L 49.75,36.1875 C 50.322887,36.760385 51.270864,36.760386 51.84375,36.1875 L 53.625,34.40625 C 54.197887,33.833363 54.197886,32.916636 53.625,32.34375 L 33,11.71875 C 32.761589,11.480339 32.465345,11.352478 32.15625,11.3125 C 32.064159,11.294597 31.968456,11.28125 31.875,11.28125 z M 38.90625,13.4375 L 38.90625,14.59375 L 38.90625,15.75 L 46.40625,23.53125 L 46.40625,15.75 L 46.40625,14.59375 L 46.40625,13.4375 L 42.65625,13.4375 L 38.90625,13.4375 z M 31.96875,20.15625 L 17.375,34.375 L 17.375,42.8125 L 17.375,51.28125 L 26.46875,51.28125 L 26.46875,36.75 L 37.40625,36.75 L 37.40625,51.28125 L 46.53125,51.28125 L 46.53125,42.8125 L 46.53125,34.375 L 31.96875,20.15625 z"
+           id="path3424" />
+      </g>
+    </clipPath>
+    <linearGradient
+       inkscape:collect="always"
+       xlink:href="#linearGradient3223"
+       id="linearGradient3426"
+       gradientUnits="userSpaceOnUse"
+       x1="31.9375"
+       y1="63.623478"
+       x2="31.9375"
+       y2="0.42568138" />
+    <linearGradient
+       inkscape:collect="always"
+       xlink:href="#linearGradient3223"
+       id="linearGradient3428"
+       gradientUnits="userSpaceOnUse"
+       x1="9.8203354"
+       y1="31.28125"
+       x2="54.054665"
+       y2="31.28125" />
+    <linearGradient
+       inkscape:collect="always"
+       xlink:href="#linearGradient3223"
+       id="linearGradient2451"
+       gradientUnits="userSpaceOnUse"
+       x1="31.9375"
+       y1="63.623478"
+       x2="31.9375"
+       y2="0.42568138" />
+    <linearGradient
+       inkscape:collect="always"
+       xlink:href="#linearGradient3223"
+       id="linearGradient2453"
+       gradientUnits="userSpaceOnUse"
+       x1="9.8203354"
+       y1="31.28125"
+       x2="54.054665"
+       y2="31.28125" />
+    <linearGradient
+       inkscape:collect="always"
+       xlink:href="#linearGradient3223"
+       id="linearGradient2455"
+       gradientUnits="userSpaceOnUse"
+       x1="31.9375"
+       y1="63.623478"
+       x2="31.9375"
+       y2="0.42568138" />
+  </defs>
+  <sodipodi:namedview
+     id="base"
+     pagecolor="#ffffff"
+     bordercolor="#666666"
+     borderopacity="1.0"
+     inkscape:pageopacity="0.0"
+     inkscape:pageshadow="2"
+     inkscape:zoom="7.7781746"
+     inkscape:cx="11.173085"
+     inkscape:cy="30.546658"
+     inkscape:current-layer="layer1"
+     showgrid="false"
+     inkscape:document-units="px"
+     inkscape:grid-bbox="true"
+     showguides="true"
+     inkscape:guide-bbox="true"
+     inkscape:window-width="1679"
+     inkscape:window-height="966"
+     inkscape:window-x="0"
+     inkscape:window-y="31">
+    <inkscape:grid
+       type="xygrid"
+       id="grid3241"
+       visible="true"
+       enabled="true" />
+    <sodipodi:guide
+       orientation="1,0"
+       position="6,60.682618"
+       id="guide2563" />
+    <sodipodi:guide
+       orientation="1,0"
+       position="42,64.282435"
+       id="guide2565" />
+    <sodipodi:guide
+       orientation="0,1"
+       position="-67.367991,6"
+       id="guide2567" />
+    <sodipodi:guide
+       orientation="0,1"
+       position="-22.370287,42"
+       id="guide2569" />
+  </sodipodi:namedview>
+  <metadata
+     id="metadata3228">
+    <rdf:RDF>
+      <cc:Work
+         rdf:about="">
+        <dc:format>image/svg+xml</dc:format>
+        <dc:type
+           rdf:resource="http://purl.org/dc/dcmitype/StillImage" />
+      </cc:Work>
+    </rdf:RDF>
+  </metadata>
+  <g
+     inkscape:groupmode="layer"
+     id="layer4"
+     inkscape:label="background"
+     style="display:none">
+    <rect
+       style="opacity:1;fill:url(#linearGradient3236);fill-opacity:1;fill-rule:evenodd;stroke:none;stroke-width:1.99999988;stroke-linecap:butt;stroke-linejoin:miter;marker:none;marker-start:none;marker-mid:none;marker-end:none;stroke-miterlimit:4;stroke-dasharray:none;stroke-dashoffset:0;stroke-opacity:1;visibility:visible;display:inline;overflow:visible;enable-background:accumulate"
+       id="rect3251"
+       width="47.954697"
+       height="48.06636"
+       x="0.12856495"
+       y="-0.025304925"
+       inkscape:export-filename="/home/ezuall/workspace/everated_resources/icon tutorial/icon_almost_final.png"
+       inkscape:export-xdpi="170.75484"
+       inkscape:export-ydpi="170.75484" />
+  </g>
+  <g
+     inkscape:groupmode="layer"
+     id="layer2"
+     inkscape:label="glow"
+     style="display:inline">
+    <g
+       id="g3246"
+       inkscape:export-filename="/home/ezuall/workspace/everated_resources/icon tutorial/icon_almost_final2.png"
+       inkscape:export-xdpi="170.75484"
+       inkscape:export-ydpi="170.75484"
+       style="fill:url(#linearGradient3229);fill-opacity:1;stroke:#ffffff;stroke-width:2.1039784;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1;display:inline;filter:url(#filter3309)"
+       transform="matrix(0.9506655,0,0,0.9504948,-6.3618795,-5.5394836)">
+      <path
+         style="fill:url(#linearGradient2455);fill-opacity:1;fill-rule:evenodd;stroke:#ffffff;stroke-width:2.1039784;stroke-linecap:butt;stroke-linejoin:miter;marker:none;marker-start:none;marker-mid:none;marker-end:none;stroke-miterlimit:4;stroke-dasharray:none;stroke-dashoffset:0;stroke-opacity:1;visibility:visible;display:inline;overflow:visible;enable-background:accumulate"
+         d="M 31.875,11.28125 C 31.812316,11.28125 31.749772,11.304446 31.6875,11.3125 C 31.378405,11.352478 31.082161,11.480339 30.84375,11.71875 L 10.25,32.34375 C 9.6771138,32.916636 9.6771136,33.833363 10.25,34.40625 L 12.03125,36.1875 C 12.604136,36.760386 13.520863,36.760385 14.09375,36.1875 L 31.9375,18.375 L 49.75,36.1875 C 50.322887,36.760385 51.270864,36.760386 51.84375,36.1875 L 53.625,34.40625 C 54.197887,33.833363 54.197886,32.916636 53.625,32.34375 L 33,11.71875 C 32.761589,11.480339 32.465345,11.352478 32.15625,11.3125 C 32.064159,11.294597 31.968456,11.28125 31.875,11.28125 z M 38.90625,13.4375 L 38.90625,14.59375 L 38.90625,15.75 L 46.40625,23.53125 L 46.40625,15.75 L 46.40625,14.59375 L 46.40625,13.4375 L 42.65625,13.4375 L 38.90625,13.4375 z M 31.96875,20.15625 L 17.375,34.375 L 17.375,42.8125 L 17.375,51.28125 L 26.46875,51.28125 L 26.46875,36.75 L 37.40625,36.75 L 37.40625,51.28125 L 46.53125,51.28125 L 46.53125,42.8125 L 46.53125,34.375 L 31.96875,20.15625 z"
+         id="path3248" />
+    </g>
+  </g>
+  <g
+     id="layer1"
+     inkscape:label="Layer 1"
+     inkscape:groupmode="layer"
+     style="display:inline">
+    <g
+       id="g3989"
+       inkscape:export-filename="/home/ezuall/workspace/everated_resources/icon tutorial/sunken.png"
+       inkscape:export-xdpi="273.94623"
+       inkscape:export-ydpi="273.94623"
+       style="fill:url(#linearGradient2453);fill-opacity:1"
+       transform="matrix(0.9506655,0,0,0.9504948,-6.3618795,-5.5394836)">
+      <path
+         style="fill:url(#linearGradient2451);fill-opacity:1;fill-rule:evenodd;stroke:none;stroke-width:0.56900001;stroke-linecap:butt;stroke-linejoin:miter;marker:none;marker-start:none;marker-mid:none;marker-end:none;stroke-miterlimit:4;stroke-dashoffset:0;stroke-opacity:1;visibility:visible;display:inline;overflow:visible;enable-background:accumulate"
+         d="M 31.875,11.28125 C 31.812316,11.28125 31.749772,11.304446 31.6875,11.3125 C 31.378405,11.352478 31.082161,11.480339 30.84375,11.71875 L 10.25,32.34375 C 9.6771138,32.916636 9.6771136,33.833363 10.25,34.40625 L 12.03125,36.1875 C 12.604136,36.760386 13.520863,36.760385 14.09375,36.1875 L 31.9375,18.375 L 49.75,36.1875 C 50.322887,36.760385 51.270864,36.760386 51.84375,36.1875 L 53.625,34.40625 C 54.197887,33.833363 54.197886,32.916636 53.625,32.34375 L 33,11.71875 C 32.761589,11.480339 32.465345,11.352478 32.15625,11.3125 C 32.064159,11.294597 31.968456,11.28125 31.875,11.28125 z M 38.90625,13.4375 L 38.90625,14.59375 L 38.90625,15.75 L 46.40625,23.53125 L 46.40625,15.75 L 46.40625,14.59375 L 46.40625,13.4375 L 42.65625,13.4375 L 38.90625,13.4375 z M 31.96875,20.15625 L 17.375,34.375 L 17.375,42.8125 L 17.375,51.28125 L 26.46875,51.28125 L 26.46875,36.75 L 37.40625,36.75 L 37.40625,51.28125 L 46.53125,51.28125 L 46.53125,42.8125 L 46.53125,34.375 L 31.96875,20.15625 z"
+         id="rect3259" />
+    </g>
+  </g>
+  <g
+     inkscape:groupmode="layer"
+     id="layer5"
+     inkscape:label="sunken"
+     style="display:inline">
+    <g
+       id="g3327"
+       inkscape:export-filename="/home/ezuall/workspace/everated_resources/icon tutorial/sunken.png"
+       inkscape:export-xdpi="273.94623"
+       inkscape:export-ydpi="273.94623"
+       style="fill:none;fill-opacity:1;stroke:#0c0000;stroke-width:1.0519892;stroke-opacity:1;display:inline;filter:url(#filter3398)"
+       clip-path="url(#clipPath3420)"
+       transform="matrix(0.9506655,0,0,0.9504948,-6.3618795,-5.5394836)">
+      <path
+         style="fill:none;fill-opacity:1;fill-rule:evenodd;stroke:#0c0000;stroke-width:0.59858179;stroke-linecap:butt;stroke-linejoin:miter;marker:none;marker-start:none;marker-mid:none;marker-end:none;stroke-miterlimit:4;stroke-dashoffset:0;stroke-opacity:1;visibility:visible;display:inline;overflow:visible;enable-background:accumulate"
+         d="M 31.875,11.28125 C 31.812316,11.28125 31.749772,11.304446 31.6875,11.3125 C 31.378405,11.352478 31.082161,11.480339 30.84375,11.71875 L 10.25,32.34375 C 9.6771138,32.916636 9.6771136,33.833363 10.25,34.40625 L 12.03125,36.1875 C 12.604136,36.760386 13.520863,36.760385 14.09375,36.1875 L 31.9375,18.375 L 49.75,36.1875 C 50.322887,36.760385 51.270864,36.760386 51.84375,36.1875 L 53.625,34.40625 C 54.197887,33.833363 54.197886,32.916636 53.625,32.34375 L 33,11.71875 C 32.761589,11.480339 32.465345,11.352478 32.15625,11.3125 C 32.064159,11.294597 31.968456,11.28125 31.875,11.28125 z M 38.90625,13.4375 L 38.90625,14.59375 L 38.90625,15.75 L 46.40625,23.53125 L 46.40625,15.75 L 46.40625,14.59375 L 46.40625,13.4375 L 42.65625,13.4375 L 38.90625,13.4375 z M 31.96875,20.15625 L 17.375,34.375 L 17.375,42.8125 L 17.375,51.28125 L 26.46875,51.28125 L 26.46875,36.75 L 37.40625,36.75 L 37.40625,51.28125 L 46.53125,51.28125 L 46.53125,42.8125 L 46.53125,34.375 L 31.96875,20.15625 z"
+         id="path3329" />
+    </g>
+  </g>
+</svg>

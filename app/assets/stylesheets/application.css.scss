@@ -23,7 +23,7 @@ padding-right: 2%;
   padding-left: 0;
 }
 
-h1, h2, h3 {
+h1, h2, h3, h4 {
   text-align: center;
 }
 
@@ -62,20 +62,20 @@ footer {
 
 .cell {
   display: table-cell;
-  padding: 24px 20px 32px;
+  padding: 24px 28px 32px;
   font-size: 1.3em;
   border-top: 1px solid black;
 }
 
-/*.cell:first-child {
-  border-left: 1px solid black;
+.cell .sub-info {
+  color: #666;
+  font-weight: 400;
+  text-align: left;
+  font-size: inherit;
+  padding: 0;
 }
 
-.cell:last-child {
-  border-right: 1px solid black;
-}*/
-
-.cell .school-name {
+.cell .main-info {
   font-size: 1.8em;
   max-width: 350px;
 }
@@ -89,45 +89,27 @@ footer {
 }
 
 .chance {
-  font-size: 2em;
+  font-size: 1.8em;
 }
 
-
-.score {
+.score, .percent {
   display: inline-block;
-}
-
-.score .num {
-  font-size: 2em;
 }
 
 .percent {
-  font-size: 2em;
-  display: inline-block;
-  padding-left: 0.5em;
+  padding-left: 0.2em;
 }
 
 .or {
-  font-size: 1.3em;
-  padding-left: 0.5em;
+  font-size: 0.7em;
+  padding-left: 0.2em;
 }
 
-.table .label {
-  color: #666;
-  font-weight: 400;
-  text-align: left;
-  font-size: inherit;
-  padding: 0;
-}
-
-div.label {
-  display: block;
-}
 
 .filter {
   padding-top: 48px;
 }
 
-.transp {
+.cell .transp {
   color: rgba(255,255,255,0)
 }

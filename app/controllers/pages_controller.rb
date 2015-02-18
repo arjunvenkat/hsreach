@@ -1,3 +1,6 @@
+require 'open-uri'
+require 'json'
+
 class PagesController < ApplicationController
 
   def home
@@ -14,16 +17,18 @@ class PagesController < ApplicationController
 
   def results
     @tier_num = School.sanitize_tier_input(params[:tier_num])
-
-
     @total_score = School.total_score_for(session[:nwea_math],
                                           session[:nwea_reading],
                                           session[:math],
                                           session[:reading],
                                           session[:science],
                                           session[:social_studies])
-
     @schools = School.all
+    url = "https://maps.googleapis.com/maps/api/geocode/json?address=#{URI.encode(params[:address])}"
+    response = open(url).read
+    parsed = JSON.parse(response)
+    @lat = parsed['results'][0]['geometry']['location']['lat']
+    @lng = parsed['results'][0]['geometry']['location']['lng']
   end
 
 end
