@@ -1,4 +1,3 @@
-
 <div class="jumbotron">
   <h1>Your total score is <%= @total_score %></h1>
   <h2>and you live in Tier <%= @tier_num %></h2>
@@ -11,11 +10,14 @@
       </div>
       <div class="table">
         <% @schools.each_with_index do |school, index| %>
-          <% if school.acceptance_chance?(@total_score, @tier_num) == "high"  %>
+          <% if school.acceptance_chance(@total_score, @map_score, @tier_num) == "high"  %>
             <div class="t-row high-acceptance school_<%= index %>">
               <div class="cell">
                 <div class="transp sub-info">-</div>
-                <div class="main-info"><%= school.name %></div>
+                <div class="main-info">
+                  <%= school.name %>
+                  <small><%= school.category %></small>
+                </div>
                 <div class="sub-info">avg score for acceptance: <%= school.avg_score(@tier_num) %></div>
                 <div class="transp sub-info dist">9.9 mi from your home</div>
               </div>
@@ -28,16 +30,20 @@
                 <div class="sub-info">you need to get</div>
                 <div class="main-info">
                   <div class="score">
-                    <span class="num"><%= school.avg_score(@tier_num) - @total_score  %></span>
+                    <span class="num">
+                        <%= school.needed_points(@total_score, @tier_num)  %>
+                    </span>
                     points
                   </div>
                   <span class="or">-or-</span>
-                  <div class="percent"><%= ((school.avg_score(@tier_num) - @total_score)*100.0/300).round(0)  %>%</div>
+                  <div class="percent">
+                    <%= school.needed_percentage(@total_score, @tier_num)  %>%
+                  </div>
                 </div>
                 <div class="sub-info">on the admissions test</div>
               </div>
             </div>
-          <% elsif school.acceptance_chance?(@total_score, @tier_num) == "medium"  %>
+          <% elsif school.acceptance_chance(@total_score, @map_score, @tier_num) == "medium"  %>
             <div class="t-row med-acceptance school_<%= index %>">
               <div class="cell">
                 <div class="transp sub-info">-</div>
@@ -54,16 +60,16 @@
                 <div class="sub-info">you need to get</div>
                 <div class="main-info">
                   <div class="score">
-                    <span class="num"><%= school.avg_score(@tier_num) - @total_score  %></span>
+                    <span class="num"><%= school.needed_points(@total_score, @tier_num)  %></span>
                     points
                   </div>
                   <span class="or">-or-</span>
-                  <div class="percent"><%= ((school.avg_score(@tier_num) - @total_score)*100.0/300).round(0)  %>%</div>
+                  <div class="percent"><%= school.needed_percentage(@total_score, @tier_num)  %>%</div>
                 </div>
                 <div class="sub-info">on the admissions test</div>
               </div>
             </div>
-          <% elsif school.acceptance_chance?(@total_score, @tier_num) == "low"  %>
+          <% elsif school.acceptance_chance(@total_score, @map_score, @tier_num) == "low"  %>
             <div class="t-row low-acceptance school_<%= index %>">
               <div class="cell">
                 <div class="transp sub-info">-</div>
@@ -80,11 +86,11 @@
                 <div class="sub-info">you need to get</div>
                 <div class="main-info">
                   <div class="score">
-                    <span class="num"><%= school.avg_score(@tier_num) - @total_score  %></span>
+                    <span class="num"><%= school.needed_points(@total_score, @tier_num)  %></span>
                     points
                   </div>
                   <span class="or">-or-</span>
-                  <div class="percent"><%= ((school.avg_score(@tier_num) - @total_score)*100.0/300).round(0)  %>%</div>
+                  <div class="percent"><%= school.needed_percentage(@total_score, @tier_num)  %>%</div>
                 </div>
                 <div class="sub-info">on the admissions test</div>
               </div>

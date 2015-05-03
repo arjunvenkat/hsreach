@@ -23,9 +23,11 @@ class PagesController < ApplicationController
                                           session[:reading],
                                           session[:science],
                                           session[:social_studies])
-    @schools = School.all.select do |school|
-      school.acceptance_chance?(@total_score, @tier_num) == "high"
-    end.take(10)
+    @map_score = School.map_score_for(session[:nwea_math], session[:nwea_reading])
+    full_list = School.all.select do |school|
+      school.acceptance_chance(@total_score, @map_score, @tier_num) == "high"
+    end
+    @schools = full_list.sort_by { |school| school.rating }.take(10)
     url = "https://maps.googleapis.com/maps/api/geocode/json?address=#{URI.encode(params[:address])}"
     response = open(url).read
     parsed = JSON.parse(response)

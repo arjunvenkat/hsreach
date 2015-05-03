@@ -1,5 +1,6 @@
 source 'https://rubygems.org'
 
+gem 'better_errors'
 gem 'seed_dump'
 gem 'geocoder'
 gem 'starter_generators', :git => 'https://github.com/rbetina/starter_generators', :branch => 'panels'

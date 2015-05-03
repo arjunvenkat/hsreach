@@ -76,8 +76,13 @@ footer {
 }
 
 .cell .main-info {
-  font-size: 1.8em;
+  font-size: 1.4em;
   max-width: 350px;
+}
+
+.main-info small {
+  font-size: 0.6em;
+  color: #666;
 }
 
 .t-row:last-child .cell {

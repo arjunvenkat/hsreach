@@ -30,7 +30,13 @@ schools = [
   {name: "Senn", tier1_score: 550, tier2_score: 550, tier3_score: 550, tier4_score: 550, category: "IB", address: "5900 N Glenwood Ave  Chicago, IL 60660", rating: 1},
   {name: "Steinmetz", tier1_score: 500, tier2_score: 500, tier3_score: 500, tier4_score: 500, category: "IB", address: "3030 N Mobile Ave  Chicago, IL 60634", rating: 2},
   {name: "Taft", tier1_score: 839, tier2_score: 839, tier3_score: 839, tier4_score: 839, category: "IB", address: "6530 W Bryn Mawr Ave  Chicago, IL 60631", rating: 2},
-  {name: "Washington", tier1_score: 515, tier2_score: 515, tier3_score: 515, tier4_score: 515, category: "IB", address: "3535 E 114th St  Chicago, IL 60617", rating: 2}
+  {name: "Washington", tier1_score: 515, tier2_score: 515, tier3_score: 515, tier4_score: 515, category: "IB", address: "3535 E 114th St  Chicago, IL 60617", rating: 2},
+  {name: "Afahs", category: "military", address: "3630 S Wells St  Chicago, IL 60609", rating: 1},
+  {name: "Carver", category: "military", address: "13100 S Doty Ave  Chicago, IL 60627", rating: 1},
+  {name: "Chicago", category: "military", address: "3519 S Giles Ave  Chicago, IL 60653", rating: 2},
+  {name: "Marine", category: "military", address: "145 S Campbell Ave  Chicago, IL 60612", rating: 2},
+  {name: "Phoenix", category: "military", address: "145 S Campbell Ave  Chicago, IL 60612", rating: 1},
+  {name: "Rickover", category: "military", address: "5900 N Glenwood Ave  Chicago, IL 60660", rating: 1},
 ]
 
 schools.each do |school|
