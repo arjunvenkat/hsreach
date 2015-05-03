@@ -14,7 +14,11 @@ class SchoolsController < ApplicationController
   def create
     @school = School.new
     @school.name = params[:name]
-    @school.avg_score = params[:avg_score]
+    @school.rank = params[:rank]
+    @school.tier1_score = params[:tier1_score]
+    @school.tier2_score = params[:tier2_score]
+    @school.tier3_score = params[:tier3_score]
+    @school.tier4_score = params[:tier4_score]
     @school.category = params[:category]
     @school.address = params[:address]
     @school.lat = params[:lat]
@@ -35,7 +39,11 @@ class SchoolsController < ApplicationController
     @school = School.find(params[:id])
 
     @school.name = params[:name]
-    @school.avg_score = params[:avg_score]
+    @school.rank = params[:rank]
+    @school.tier1_score = params[:tier1_score]
+    @school.tier2_score = params[:tier2_score]
+    @school.tier3_score = params[:tier3_score]
+    @school.tier4_score = params[:tier4_score]
     @school.category = params[:category]
     @school.address = params[:address]
     @school.lat = params[:lat]
