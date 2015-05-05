@@ -11,7 +11,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20150430232750) do
+ActiveRecord::Schema.define(version: 20150505013515) do
 
   create_table "schools", force: :cascade do |t|
     t.string   "name"
@@ -26,6 +26,7 @@ ActiveRecord::Schema.define(version: 20150430232750) do
     t.integer  "tier3_score"
     t.integer  "tier4_score"
     t.integer  "rating"
+    t.string   "type"
   end
 
 end

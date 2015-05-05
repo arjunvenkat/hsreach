@@ -40,7 +40,16 @@ schools = [
 ]
 
 schools.each do |school|
-  unless School.find_by(name: school["name"])
-    School.create!(school)
+  unless School.find_by(name: school[:name])
+    if school[:category] == "selective"
+      SelectiveSchool.create!(school)
+    elsif school[:category] == "IB"
+      IbSchool.create!(school)
+    elsif school[:category] == "military"
+      MilitarySchool.create!(school)
+    end
   end
+  sleep(0.3)
 end
+
+puts "#{School.count} schools in the database"
