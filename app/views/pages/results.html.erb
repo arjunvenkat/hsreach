@@ -5,33 +5,34 @@
 
 <div class="container">
   <div class="row">
-    <div class="col-md-10 col-md-offset-1">
+    <div class="col-md-8 col-md-offset-2">
+
+      <h3>You have a high change to get into:</h3>
       <div class="filter">
       </div>
       <div class="table">
         <% @schools.each_with_index do |school, index| %>
-          <% if school.acceptance_chance(@total_score, @map_score, @tier_num) == "high"  %>
-            <div class="t-row high-acceptance school_<%= index %>">
-              <div class="cell">
-                <div class="transp sub-info">-</div>
-                <div class="main-info">
-                  <%= school.name %>
-                  <small><%= school.category %></small>
-                </div>
-                <div class="sub-info">avg score for acceptance: <%= school.avg_score(@tier_num) %></div>
-                <div class="transp sub-info dist">9.9 mi from your home</div>
-              </div>
-              <div class="cell">
+        <div class="t-row high-acceptance school_<%= index %>">
+          <div class="cell">
+            <div class="transp sub-info">-</div>
+            <div class="main-info">
+              <%= school.name %>
+              <small><%= school.category %></small>
+            </div>
+            <div class="sub-info">avg score for acceptance: <%= school.avg_score(@tier_num) %></div>
+            <div class="transp sub-info dist">9.9 mi from your home</div>
+          </div>
+<!--               <div class="cell">
                 <div class="transp sub-info">-</div>
                 <div class="main-info">high</div>
                 <div class="sub-info">chance of acceptance</div>
-              </div>
+              </div> -->
               <div class="cell">
                 <div class="sub-info">you need to get</div>
                 <div class="main-info">
                   <div class="score">
                     <span class="num">
-                        <%= school.needed_points(@total_score, @tier_num)  %>
+                      <%= school.needed_points(@total_score, @tier_num)  %>
                     </span>
                     points
                   </div>
@@ -43,157 +44,88 @@
                 <div class="sub-info">on the admissions test</div>
               </div>
             </div>
-          <% elsif school.acceptance_chance(@total_score, @map_score, @tier_num) == "medium"  %>
-            <div class="t-row med-acceptance school_<%= index %>">
-              <div class="cell">
-                <div class="transp sub-info">-</div>
-                <div class="main-info"><%= school.name %></div>
-                <div class="sub-info">avg score for acceptance: <%= school.avg_score(@tier_num) %></div>
-                <div class="transp sub-info dist">9.9 mi from your home</div>
-              </div>
-              <div class="cell">
-                <div class="transp sub-info">-</div>
-                <div class="main-info">medium</div>
-                <div class="sub-info">chance of acceptance</div>
-              </div>
-              <div class="cell">
-                <div class="sub-info">you need to get</div>
-                <div class="main-info">
-                  <div class="score">
-                    <span class="num"><%= school.needed_points(@total_score, @tier_num)  %></span>
-                    points
-                  </div>
-                  <span class="or">-or-</span>
-                  <div class="percent"><%= school.needed_percentage(@total_score, @tier_num)  %>%</div>
-                </div>
-                <div class="sub-info">on the admissions test</div>
-              </div>
-            </div>
-          <% elsif school.acceptance_chance(@total_score, @map_score, @tier_num) == "low"  %>
-            <div class="t-row low-acceptance school_<%= index %>">
-              <div class="cell">
-                <div class="transp sub-info">-</div>
-                <div class="main-info"><%= school.name %></div>
-                <div class="sub-info">avg score for acceptance: <%= school.avg_score(@tier_num) %></div>
-                <div class="transp sub-info dist">9.9 mi from your home</div>
-              </div>
-              <div class="cell">
-                <div class="transp sub-info">-</div>
-                <div class="main-info">low</div>
-                <div class="sub-info">chance of acceptance</div>
-              </div>
-              <div class="cell">
-                <div class="sub-info">you need to get</div>
-                <div class="main-info">
-                  <div class="score">
-                    <span class="num"><%= school.needed_points(@total_score, @tier_num)  %></span>
-                    points
-                  </div>
-                  <span class="or">-or-</span>
-                  <div class="percent"><%= school.needed_percentage(@total_score, @tier_num)  %>%</div>
-                </div>
-                <div class="sub-info">on the admissions test</div>
-              </div>
-            </div>
-          <% else  %>
-            <div class="t-row no-acceptance school_<%= index %>">
-              <div class="cell">
-                <div class="transp sub-info">-</div>
-                <div class="main-info"><%= school.name %></div>
-                <div class="sub-info">avg score for acceptance: <%= school.avg_score(@tier_num) %></div>
-                <div class="transp sub-info dist">9.9 mi from your home</div>
-              </div>
-              <div class="cell">
-                <div class="transp sub-info">-</div>
-                <div class="main-info">no</div>
-                <div class="sub-info">chance of acceptance</div>
-              </div>
-              <div class="cell">
-              </div>
-            </div>
-          <% end %>
-        <% end %>
+            <% end %>
+          </div>
+        </div>
       </div>
     </div>
-  </div>
-</div>
 
-<h2>School locations</h2>
-<p>Mouse over the marker to find the school name</p>
+    <h2>School locations</h2>
+    <p>Mouse over the marker to find the school name</p>
 
-<style type="text/css">
-  html, body, #map-canvas { height: 500px; margin: 0;}
-</style>
-<script type="text/javascript"
-  src="https://maps.googleapis.com/maps/api/js?">
-</script>
-<script type="text/javascript">
-  function initialize() {
-    var mapOptions = {
-      center: { lat: <%= @lat %>, lng: <%= @lng %>},
-      zoom: 10
-    };
-    var map = new google.maps.Map(document.getElementById('map-canvas'),
+    <style type="text/css">
+      html, body, #map-canvas { height: 500px; margin: 0;}
+    </style>
+    <script type="text/javascript"
+    src="https://maps.googleapis.com/maps/api/js?">
+  </script>
+  <script type="text/javascript">
+    function initialize() {
+      var mapOptions = {
+        center: { lat: <%= @lat %>, lng: <%= @lng %>},
+        zoom: 10
+      };
+      var map = new google.maps.Map(document.getElementById('map-canvas'),
         mapOptions);
 
-    var schoolLocations = [];
-    <% @schools.each do |school| %>
+      var schoolLocations = [];
+      <% @schools.each do |school| %>
       var schoolLocation = new google.maps.LatLng(<%= school.lat %>,<%= school.long %>);
       var marker = new google.maps.Marker({
-          position: schoolLocation,
-          map: map,
-          title:"<%= school.name %>"
+        position: schoolLocation,
+        map: map,
+        title:"<%= school.name %>"
       });
       schoolLocations.push(schoolLocation);
-    <% end %>
+      <% end %>
 
-     var image = "<%= asset_path('house_icon.svg') %>";
-     var home = new google.maps.LatLng(<%= @lat %>, <%= @lng %>);
-     var beachMarker = new google.maps.Marker({
-         position: home,
-         map: map,
-         icon: image,
-         title: "Your home"
+      var image = "<%= asset_path('house_icon.svg') %>";
+      var home = new google.maps.LatLng(<%= @lat %>, <%= @lng %>);
+      var beachMarker = new google.maps.Marker({
+       position: home,
+       map: map,
+       icon: image,
+       title: "Your home"
      });
 
 
-     var origin = home
+      var origin = home
 
-     var destinationA = "Stockholm, Sweden";
-     var destinationB = new google.maps.LatLng(50.087692, 14.421150);
+      var destinationA = "Stockholm, Sweden";
+      var destinationB = new google.maps.LatLng(50.087692, 14.421150);
 
-     var service = new google.maps.DistanceMatrixService();
-     service.getDistanceMatrix(
-       {
-         origins: [home],
-         destinations: schoolLocations,
-         travelMode: google.maps.TravelMode.DRIVING,
-         unitSystem: google.maps.UnitSystem.IMPERIAL
-       }, callback);
+      var service = new google.maps.DistanceMatrixService();
+      service.getDistanceMatrix(
+      {
+       origins: [home],
+       destinations: schoolLocations,
+       travelMode: google.maps.TravelMode.DRIVING,
+       unitSystem: google.maps.UnitSystem.IMPERIAL
+     }, callback);
 
 
 
-     function callback(response, status) {
-      console.log(response);
-       $.each(response.rows[0].elements, function(index, object){
+      function callback(response, status) {
+        console.log(response);
+        $.each(response.rows[0].elements, function(index, object){
           var distance = object.distance.text
           console.log(distance);
           $('.school_' + index + ' .dist')
-            .text(distance + " from your home")
-            .removeClass('transp');
-       });
-     }
+          .text(distance + " from your home")
+          .removeClass('transp');
+        });
+      }
 
 
 
-  }
-  google.maps.event.addDomListener(window, 'load', initialize);
-</script>
+    }
+    google.maps.event.addDomListener(window, 'load', initialize);
+  </script>
 
-<div class="container">
-  <div class="row">
-    <div class="col-md-10 col-md-offset-1">
-      <div id="map-canvas"></div>
+  <div class="container">
+    <div class="row">
+      <div class="col-md-10 col-md-offset-1">
+        <div id="map-canvas"></div>
+      </div>
     </div>
   </div>
-</div>
