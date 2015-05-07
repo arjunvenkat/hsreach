@@ -16,6 +16,24 @@ class PagesController < ApplicationController
   end
 
   def results
+    if user_signed_in?
+      snapshot = Snapshot.new
+      snapshot.user_id = current_user.id
+      snapshot.nwea_math = session[:nwea_math]
+      snapshot.nwea_reading = session[:nwea_reading]
+      snapshot.math = session[:math]
+      snapshot.reading = session[:reading]
+      snapshot.science = session[:science]
+      snapshot.social_studies = session[:social_studies]
+      if current_user.snapshots.last
+        if (Time.now - current_user.snapshots.last.updated_at > 1.day)
+          snapshot.save
+        end
+      else
+        snapshot.save
+      end
+    end
+
     @tier_num = School.sanitize_tier_input(params[:tier_num])
     @total_score = School.total_score_for(session[:nwea_math],
                                           session[:nwea_reading],

@@ -1,0 +1,41 @@
+<h1>Your scores</h1>
+
+<div class="container spacer">
+  <div class="row">
+    <div class="col-md-12">
+      <table class="table table-hover table-striped">
+        <tr>
+          <th>Date</th>
+          <th>NWEA math</th>
+          <th>NWEA reading</th>
+          <th>Math</th>
+          <th>Reading</th>
+          <th>Science</th>
+          <th>Social Studies</th>
+          <th></th>
+        </tr>
+        <% @user.snapshots.each do |snapshot| %>
+          <tr>
+            <td><%= snapshot.updated_at.strftime("%b %e, %Y") %></td>
+            <td><%= snapshot.nwea_math %></td>
+            <td><%= snapshot.nwea_reading %></td>
+            <td><%= snapshot.math %></td>
+            <td><%= snapshot.reading %></td>
+            <td><%= snapshot.science %></td>
+            <td><%= snapshot.social_studies %></td>
+            <% if @user == current_user || @user.email == "a@a.com" %>
+              <td><%= link_to icon('edit'), edit_snapshot_url(snapshot), class: "btn btn-warning" %>
+              <%= link_to icon('trash-o'), snapshot, method: :delete, data: { confirm: "Do you really want to delete this snapshot?" }, class: "btn btn-danger" %></td>
+            <% end %>
+          </tr>
+        <% end %>
+      </table>
+
+      <% if @user.snapshots.empty? %>
+        <h2>You don't have any scores yet!</h2>
+        <h3>Use <a href="/">our calculator</a> to enter some scores</h3>
+      <% end %>
+
+    </div>
+  </div>
+</div>

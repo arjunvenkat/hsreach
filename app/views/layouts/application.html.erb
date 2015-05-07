@@ -44,6 +44,7 @@
 
       <ul class="nav navbar-nav navbar-right">
         <% if user_signed_in? %>
+          <li><a href="/users/<%= current_user.id %>">Your scores</a></li>
           <li><a href="/users/edit"><%= current_user.email %></a></li>
           <li><a href="/users/sign_out" data-method="delete">Sign out</a></li>
         <% else %>

@@ -1,0 +1,45 @@
+<%= form_for(@snapshot) do |f| %>
+  <% if @snapshot.errors.any? %>
+    <div id="error_explanation">
+      <h2><%= pluralize(@snapshot.errors.count, "error") %> prohibited this snapshot from being saved:</h2>
+
+      <ul>
+      <% @snapshot.errors.full_messages.each do |message| %>
+        <li><%= message %></li>
+      <% end %>
+      </ul>
+    </div>
+  <% end %>
+
+  <div class="field">
+    <%= f.label :user_id %><br>
+    <%= f.number_field :user_id %>
+  </div>
+  <div class="field">
+    <%= f.label :nwea_math %><br>
+    <%= f.number_field :nwea_math %>
+  </div>
+  <div class="field">
+    <%= f.label :nwea_reading %><br>
+    <%= f.number_field :nwea_reading %>
+  </div>
+  <div class="field">
+    <%= f.label :math %><br>
+    <%= f.text_field :math %>
+  </div>
+  <div class="field">
+    <%= f.label :reading %><br>
+    <%= f.text_field :reading %>
+  </div>
+  <div class="field">
+    <%= f.label :science %><br>
+    <%= f.text_field :science %>
+  </div>
+  <div class="field">
+    <%= f.label :social_studies %><br>
+    <%= f.text_field :social_studies %>
+  </div>
+  <div class="actions">
+    <%= f.submit %>
+  </div>
+<% end %>

@@ -1,5 +1,8 @@
 Rails.application.routes.draw do
+  resources :snapshots
+
   devise_for :users
+  get '/users/:id' => 'users#show'
   # Routes for the School resource:
   # CREATE
   get '/schools/new',      :controller => 'schools', :action => 'new',    :as => 'new_school'
