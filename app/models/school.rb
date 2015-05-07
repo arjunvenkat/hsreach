@@ -36,5 +36,4 @@ class School < ActiveRecord::Base
   def needed_percentage(total_score, tier)
     (needed_points(total_score, tier)*100.0/300).round(0)
   end
-
 end

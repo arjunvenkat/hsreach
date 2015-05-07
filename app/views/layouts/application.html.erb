@@ -39,18 +39,18 @@
     <!-- Collect the nav links, forms, and other content for toggling -->
     <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
       <ul class="nav navbar-nav">
-        <!-- <li><a href="#">About</a></li> -->
+        <li><a href=""></a></li>
       </ul>
 
-   <!--    <ul class="nav navbar-nav navbar-right">
-        <% if 1 > 2 %>
-          <li><a href="/users/edit">Oscar the Grouch</a></li>
+      <ul class="nav navbar-nav navbar-right">
+        <% if user_signed_in? %>
+          <li><a href="/users/edit"><%= current_user.email %></a></li>
           <li><a href="/users/sign_out" data-method="delete">Sign out</a></li>
         <% else %>
           <li><a href="/users/sign_up">Sign up</a></li>
           <li><a href="/users/sign_in">Sign in</a></li>
         <% end %>
-      </ul> -->
+      </ul>
     </div><!-- /.navbar-collapse -->
   </nav>
 

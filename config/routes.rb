@@ -1,4 +1,5 @@
 Rails.application.routes.draw do
+  devise_for :users
   # Routes for the School resource:
   # CREATE
   get '/schools/new',      :controller => 'schools', :action => 'new',    :as => 'new_school'
@@ -16,7 +17,7 @@ Rails.application.routes.draw do
   delete '/schools/:id',   :controller => 'schools', :action => 'destroy'
   #------------------------------
 
-  get "/" => 'pages#home'
+  root 'pages#home'
   get "/results" => 'pages#results'
   get "/get_tier" => 'pages#get_tier'
   # The priority is based upon order of creation: first created -> highest priority.

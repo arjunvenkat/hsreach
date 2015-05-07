@@ -12,6 +12,7 @@
  *
  *= require_tree .
  *= require_self
+ *= require devise_bootstrap_views
  */
 
 .navbar {
@@ -117,4 +118,9 @@ footer {
 
 .cell .transp {
   color: rgba(255,255,255,0)
+}
+
+
+.spacer {
+  padding-top: 24px;
 }

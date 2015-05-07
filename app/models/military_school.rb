@@ -4,10 +4,10 @@ class MilitarySchool < School
   end
 
   def acceptance_chance(total_score, map_score, tier)
-    if map_score > 48
+    if map_score >= 48
       return "high"
     else
-      return "low"
+      return "no"
     end
   end
 
